@@ -62,8 +62,8 @@
   font-weight: normal;
   font-style: normal; }
 
-.icon, .icon-arrow-bottom-1, .icon-arrow-bottom-2, .icon-arrow-bottom-3, .icon-ribbon_blue, .icon-srtiked-1, p.price span:before, body:before, body.v1 .box:after, body.v3 .box:after, body.v5 .box:after {
-  background: url('../img/icon-sc973d998b2.png') no-repeat; }
+.icon, .icon-arrow-bottom-1, .icon-arrow-bottom-2, .icon-arrow-bottom-3, .icon-ribbon_blue, .icon-srtiked-1, p.price span:before, body .ribbon, body.v1 .box:after, body.v3 .box:after, body.v5 .box:after {
+  background: url('../img/icon-s33ab660e9d.png') no-repeat; }
 
 .icon-arrow-bottom-1 {
   background-position: 0 0;
@@ -90,7 +90,7 @@
   height: 38px;
   width: 35px; }
 
-.icon, .icon-arrow-bottom-1, .icon-arrow-bottom-2, .icon-arrow-bottom-3, .icon-ribbon_blue, .icon-srtiked-1, p.price span:before, body:before, body.v1 .box:after, body.v3 .box:after, body.v5 .box:after {
+.icon, .icon-arrow-bottom-1, .icon-arrow-bottom-2, .icon-arrow-bottom-3, .icon-ribbon_blue, .icon-srtiked-1, p.price span:before, body .ribbon, body.v1 .box:after, body.v3 .box:after, body.v5 .box:after {
   display: inline-block; }
 
 /* Main elements */
@@ -237,8 +237,7 @@ p.price {
 body {
   position: relative;
   padding-bottom: 40px; }
-  body:before {
-    content: '';
+  body .ribbon {
     position: fixed;
     top: 0;
     right: 0;
@@ -246,6 +245,23 @@ body {
     height: 120px;
     width: 119px;
     z-index: 10000; }
+    body .ribbon strong {
+      position: absolute;
+      top: 56px;
+      left: 33px;
+      color: #fff;
+      display: block;
+      width: 100%;
+      font-family: "oswald-regular";
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg); }
+      html.ie8 body .ribbon strong {
+        left: 33px;
+        top: 8px;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476)";
+        /* IE8 */ }
   @media (max-width: 766px) {
     body h1 br, body h2 br {
       display: none; } }
